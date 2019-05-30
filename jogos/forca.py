@@ -83,6 +83,17 @@ def marca_chute_correto(chute, letras_acertadas, palavra_secreta):
 
 def imprime_mensagem_vencedor():
     print("Você ganhou!!!")
+    	print('Parabéns,	você	ganhou!')
+        print("						 ___________						")
+        print("						'._==_==_=_.'					    ")
+        print("				        .-\\:	  /-.				")
+        print("		   			  |	 (|:.	  |)  |				")
+        print("						'-|:.	  |-'					")
+        print("						 \\::.	  /						")
+        print("						   '::.	.'								")
+        print("							)	(										")
+        print("						  _.'	'._								")
+        print("						  '-------'							") 
 
 
 def imprime_mensagem_perdedor(palavra_secreta):
