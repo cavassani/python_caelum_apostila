@@ -7,8 +7,8 @@ def jogar():
 
     palavra_secreta = carrega_palavra_secreta()
 
-    inicializa_letras_acertadas(palavra_secreta)
-
+    letras_acertadas = inicializa_letras_acertadas(palavra_secreta)
+    print(letras_acertadas)
     acertou = False
     enforcou = False
     erros = 0
@@ -65,6 +65,7 @@ def carrega_palavra_secreta():
 
 def inicializa_letras_acertadas(palavra):
     letras_acertadas = ['_' for letra in palavra]
+    return letras_acertadas
 
 
 def pede_chute():
@@ -83,17 +84,17 @@ def marca_chute_correto(chute, letras_acertadas, palavra_secreta):
 
 def imprime_mensagem_vencedor():
     print("Você ganhou!!!")
-    	print('Parabéns,	você	ganhou!')
-        print("						 ___________						")
-        print("						'._==_==_=_.'					    ")
-        print("				        .-\\:	  /-.				")
-        print("		   			  |	 (|:.	  |)  |				")
-        print("						'-|:.	  |-'					")
-        print("						 \\::.	  /						")
-        print("						   '::.	.'								")
-        print("							)	(										")
-        print("						  _.'	'._								")
-        print("						  '-------'							") 
+    print('Parabéns, você ganhou!')
+    print("		 ___________	")
+    print("		'._==_==_=_.'	")
+    print("		 -\\:	  /-.   ")
+    print("	  |  (|:.	  |)  |	")
+    print("		'-|:.	  |-'	")
+    print("		  \\::.   /		")
+    print("		  '::.	.'		")
+    print("			)   (		")
+    print("		  _.'   '._		")
+    print("		  '-------'		") 
 
 
 def imprime_mensagem_perdedor(palavra_secreta):
