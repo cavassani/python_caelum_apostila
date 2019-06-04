@@ -22,15 +22,16 @@ def jogar():
             marca_chute_correto(chute,letras_acertadas, palavra_secreta)
         else:
             erros += 1
+            desenha_forca(erros)
 
-        enforcou = erros == 5
+        enforcou = erros == 7
         acertou = '_' not in letras_acertadas
         print(letras_acertadas)
 
     if(acertou):
         imprime_mensagem_vencedor()
     else:
-        imprime_mensagem_perdedor()
+        imprime_mensagem_perdedor(palavra_secreta)
 
     print('Fim do jogo')
 
@@ -115,3 +116,39 @@ def imprime_mensagem_perdedor(palavra_secreta):
     print("   \__            __/       ")
     print("      \__      __/          ")
     print("       \_______/            ")
+
+
+def desenha_forca(erros):
+    if (erros == 1):
+        print("      /////       ")
+    elif (erros == 2):
+       print("      /////       ")
+       print("    (.O...O.)     ")
+    elif (erros == 3):
+        print("      /////       ")
+        print("    (.X...X.)     ")
+        print("       ||||      ")
+    elif (erros == 4):
+        print("      /////       ")
+        print("    (.O...O.)     ")
+        print("       ||||      ")
+        print("=======||||========")
+    elif (erros == 5):
+        print("      /////       ")
+        print("    (.o...o.)     ")
+        print("       ||||      ")
+        print("=======||||========")
+        print("      //..\\       ")
+    elif (erros == 6):
+        print("      /////       ")
+        print("    (.X...O.)     ")
+        print("       ||||      ")
+        print("=======||||========")
+        print("      //..\\       ")
+    elif (erros == 7):
+        print("      /////       ")
+        print("    (.X...X.)     ")
+        print("       ||||      ")
+        print("=======||||========")
+        print("      //..\\       ")
+        print("você se fudeu meu irmão!!!!!!!!!!")
